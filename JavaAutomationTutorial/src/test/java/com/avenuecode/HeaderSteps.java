@@ -20,6 +20,7 @@ public class HeaderSteps {
 
     @Before
     public void start() {
+        System.setProperty("webdriver.chrome.driver", "../drivers/chromedriver");
         this.driver = new ChromeDriver();
     }
 

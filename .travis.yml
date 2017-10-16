@@ -1,3 +1,10 @@
 language: java
 
 before_script: cd actraining
+
+addons:
+  chrome: stable
+
+script:
+  - whereis google-chrome-stable
+  - whereis chromedriver

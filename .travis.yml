@@ -1,10 +1,10 @@
-language: java
-
 before_script: cd actraining
-
+language: java
+sudo: required
+dist: trusty
 addons:
   chrome: stable
-
 script:
   - whereis google-chrome-stable
+  - google-chrome-stable --version
   - whereis chromedriver

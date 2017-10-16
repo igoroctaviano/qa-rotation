@@ -43,35 +43,35 @@ formatter.match({
   "location": "CommonSteps.i_visit_Avenue_Code_website()"
 });
 formatter.result({
-  "duration": 3278926476,
+  "duration": 7218089043,
   "status": "passed"
 });
 formatter.match({
   "location": "FooterSteps.the_footer_display_the_top_three_blog_posts()"
 });
 formatter.result({
-  "duration": 54162468,
+  "duration": 53304972,
   "status": "passed"
 });
 formatter.match({
   "location": "FooterSteps.a_link_is_clicked()"
 });
 formatter.result({
-  "duration": 106332334,
+  "duration": 100773989,
   "status": "passed"
 });
 formatter.match({
   "location": "FooterSteps.i_should_redirect_to_the_content()"
 });
 formatter.result({
-  "duration": 1904325955,
+  "duration": 3491811680,
   "status": "passed"
 });
 formatter.match({
   "location": "CommonSteps.i_close_the_browser()"
 });
 formatter.result({
-  "duration": 68171072,
+  "duration": 68708229,
   "status": "passed"
 });
 formatter.scenario({
@@ -111,35 +111,35 @@ formatter.match({
   "location": "CommonSteps.i_visit_Avenue_Code_website()"
 });
 formatter.result({
-  "duration": 23889384077,
+  "duration": 4017617190,
   "status": "passed"
 });
 formatter.match({
   "location": "FooterSteps.the_footer_display_the_latest_event()"
 });
 formatter.result({
-  "duration": 41360,
+  "duration": 44843,
   "status": "passed"
 });
 formatter.match({
   "location": "FooterSteps.a_event_is_clicked()"
 });
 formatter.result({
-  "duration": 17902,
+  "duration": 13851,
   "status": "passed"
 });
 formatter.match({
   "location": "FooterSteps.i_should_redirect_to_the_events_page_with_event_details()"
 });
 formatter.result({
-  "duration": 19792,
+  "duration": 12936,
   "status": "passed"
 });
 formatter.match({
   "location": "CommonSteps.i_close_the_browser()"
 });
 formatter.result({
-  "duration": 69855916,
+  "duration": 65914110,
   "status": "passed"
 });
 formatter.uri("com/avenuecode/header.feature");
@@ -246,7 +246,7 @@ formatter.match({
   "location": "CommonSteps.i_visit_Avenue_Code_website()"
 });
 formatter.result({
-  "duration": 5779058174,
+  "duration": 3880465501,
   "status": "passed"
 });
 formatter.match({
@@ -259,14 +259,14 @@ formatter.match({
   "location": "HeaderSteps.i_want_the_home_page_header_to_display_the_link(String)"
 });
 formatter.result({
-  "duration": 371193076,
+  "duration": 492740602,
   "status": "passed"
 });
 formatter.match({
   "location": "CommonSteps.i_close_the_browser()"
 });
 formatter.result({
-  "duration": 64968820,
+  "duration": 65396633,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -389,14 +389,14 @@ formatter.match({
   "location": "CommonSteps.i_visit_Avenue_Code_website()"
 });
 formatter.result({
-  "duration": 2437572897,
+  "duration": 3425993216,
   "status": "passed"
 });
 formatter.match({
   "location": "HeaderSteps.i_switch_the_language_to_portuguese()"
 });
 formatter.result({
-  "duration": 2126856013,
+  "duration": 2966130129,
   "status": "passed"
 });
 formatter.match({
@@ -409,14 +409,14 @@ formatter.match({
   "location": "HeaderSteps.i_want_the_home_page_header_to_display_the_link(String)"
 });
 formatter.result({
-  "duration": 373424528,
+  "duration": 388648556,
   "status": "passed"
 });
 formatter.match({
   "location": "CommonSteps.i_close_the_browser()"
 });
 formatter.result({
-  "duration": 65492169,
+  "duration": 67175411,
   "status": "passed"
 });
 formatter.uri("com/avenuecode/login.feature");
@@ -459,14 +459,14 @@ formatter.match({
   "location": "CommonSteps.i_visit_Avenue_Code_website()"
 });
 formatter.result({
-  "duration": 3324471881,
+  "duration": 3539960944,
   "status": "passed"
 });
 formatter.match({
   "location": "CareersSteps.i_navigate_to_Open_Positions_page()"
 });
 formatter.result({
-  "duration": 2247406633,
+  "duration": 4704505988,
   "status": "passed"
 });
 formatter.match({
@@ -479,14 +479,14 @@ formatter.match({
   "location": "CareersSteps.i_should_see_at_least_job_locations(int)"
 });
 formatter.result({
-  "duration": 26406318,
+  "duration": 30456633,
   "status": "passed"
 });
 formatter.match({
   "location": "CommonSteps.i_close_the_browser()"
 });
 formatter.result({
-  "duration": 66451870,
+  "duration": 67049286,
   "status": "passed"
 });
 });

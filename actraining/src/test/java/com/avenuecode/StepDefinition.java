@@ -2,12 +2,23 @@ package com.avenuecode;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.chrome.
+import org.openqa.selenium.remote.DesiredCapabilities;;
 
 public abstract class StepDefinition {
     protected static WebDriver driver;
 
     protected WebDriver getDriver() {
-        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver");
+        // System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver");
+        final ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.setBinary("/path/to/google-chrome-stable");
+        chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--disable-gpu");
+
+        final DesiredCapabilities dc = new DesiredCapabilities();
+        dc.setJavascriptEnabled(true);
+        dc.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 
         if (driver == null) {
             driver = new ChromeDriver();

@@ -13,7 +13,7 @@ public abstract class StepDefinition {
             System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver");
 
             final ChromeOptions chromeOptions = new ChromeOptions();
-            chromeOptions.setBinary("/usr/bin/google-chrome-stable");
+            // chromeOptions.setBinary("/usr/bin/google-chrome-stable");
             chromeOptions.addArguments("--headless");
             chromeOptions.addArguments("--disable-gpu");
 

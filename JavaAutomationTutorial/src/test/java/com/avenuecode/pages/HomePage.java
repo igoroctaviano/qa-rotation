@@ -1,5 +1,6 @@
 package com.avenuecode.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -7,12 +8,14 @@ import java.util.List;
 
 public class HomePage {
 
+    final WebDriver driver;
+
+    public HomePage(WebDriver driver) {
+        this.driver = driver;
+    }
+
     @FindBy(linkText = "Careers")
     private WebElement careerLink;
-
-    public void navigateToCareersPage() {
-        this.careerLink.click();
-    }
 
     @FindBy(xpath = "//div[@class='blogs-content']/div[@class='sub-footer-container']/a")
     private List<WebElement> footerBlogsContent;
@@ -26,6 +29,10 @@ public class HomePage {
     @FindBy(xpath = "//a[contains(text(), 'PT')]")
     private List<WebElement> ptLinks;
 
+    public void navigateToCareersPage() {
+        this.careerLink.click();
+    }
+
     public int footerBlogsContentTotalCount() {
         return this.footerBlogsContent.size();
     }
@@ -34,12 +41,8 @@ public class HomePage {
         this.footerBlogsContent.get(0).click();
     }
 
-    public void navigateToFirstEventDetails() {
-
-    }
-
     public boolean linkIsDisplayed(String link) {
-        for (WebElement element : headerLinks) {
+        for (WebElement element : this.headerLinks) {
             if (element.getText().equals(link) && element.isDisplayed()) {
                 return true;
             }

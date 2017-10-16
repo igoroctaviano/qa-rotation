@@ -18,20 +18,10 @@ public class HeaderSteps {
 
     private WebDriver driver;
 
-    @Before
-    public void start() {
-        System.setProperty("webdriver.chrome.driver", "src/test/com/avenuecode/drivers/chromedriver");
+    //@Before
+    public void setUp() {
+        // System.setProperty("webdriver.chrome.driver", "src/test/com/avenuecode/drivers/chromedriver");
         this.driver = new ChromeDriver();
-    }
-
-    @After
-    public void tearDown() {
-        this.driver.quit();
-    }
-
-    @Given("^I visit Avenue Code website3$")
-    public void i_visit_Avenue_Code_website3() throws Throwable {
-        this.driver.get("https://www.avenuecode.com/");
     }
 
     @Given("^I switch the language to portuguese$")
@@ -44,5 +34,10 @@ public class HeaderSteps {
     public void i_want_the_home_page_header_to_display_the_link(String link) throws Throwable {
         HomePage homePage = PageFactory.initElements(this.driver, HomePage.class);
         assertThat(homePage.linkIsDisplayed(link), equalTo(true));
+    }
+
+    // @After
+    public void tearDown() {
+        this.driver.quit();
     }
 }

@@ -26,24 +26,21 @@ public class FooterSteps {
 
     private WebDriver driver;
 
-    @Before
-    public void start() {
+    //@Before
+    public void setUp() {
         this.driver = new ChromeDriver();
-    }
-
-    @After
-    public void tearDown() {
-        this.driver.quit();
     }
 
     @Given("^I visit Avenue Code website2$")
     public void i_visit_Avenue_Code_website2() throws Throwable {
+        this.driver = new ChromeDriver();
         this.driver.get("https://www.avenuecode.com/");
     }
 
     // Blog posts
     @Given("^The footer display the top three blog posts$")
     public void the_footer_display_the_top_three_blog_posts() throws Throwable {
+        // Thread.sleep(10000);
         HomePage homePage = PageFactory.initElements(this.driver, HomePage.class);
         assertThat(homePage.footerBlogsContentTotalCount(), equalTo(3));
     }
@@ -58,7 +55,7 @@ public class FooterSteps {
     public void i_should_redirect_to_the_content() throws Throwable {
         // Switch to new blog post tab
         ArrayList<String> tabs = new ArrayList<String>(this.driver.getWindowHandles());
-        driver.switchTo().window(tabs.get(1));
+        this.driver.switchTo().window(tabs.get(1));
 
         // Verify if the title of the post is displayed
         BlogPage blogPage = PageFactory.initElements(this.driver, BlogPage.class);
@@ -76,5 +73,10 @@ public class FooterSteps {
 
     @Then("^It should redirect to the events page with event details$")
     public void i_should_redirect_to_the_events_page_with_event_details() throws Throwable {
+    }
+
+    // @After
+    public void tearDown() {
+        this.driver.quit();
     }
 }

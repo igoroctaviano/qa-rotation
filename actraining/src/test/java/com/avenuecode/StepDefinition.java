@@ -15,6 +15,7 @@ public abstract class StepDefinition {
             final ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.addArguments("--headless");
             chromeOptions.addArguments("--disable-gpu");
+            chromeOptions.addArguments("window-size=1200,1100"); // Element will not be visible in the default headless configuration
 
             final DesiredCapabilities dc = new DesiredCapabilities();
             dc.setJavascriptEnabled(true);

@@ -12,14 +12,14 @@ public abstract class StepDefinition {
         if (driver == null) {
             System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver");
 
-            /* final ChromeOptions chromeOptions = new ChromeOptions();
-            // chromeOptions.setBinary("/usr/bin/google-chrome-stable /usr/bin/X11/google-chrome-stable");
+            final ChromeOptions chromeOptions = new ChromeOptions();
+            chromeOptions.setBinary("/usr/bin/google-chrome-stable");
             chromeOptions.addArguments("--headless");
             chromeOptions.addArguments("--disable-gpu");
 
             final DesiredCapabilities dc = new DesiredCapabilities();
             dc.setJavascriptEnabled(true);
-            dc.setCapability(ChromeOptions.CAPABILITY, chromeOptions); */
+            dc.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 
             driver = new ChromeDriver();
         }

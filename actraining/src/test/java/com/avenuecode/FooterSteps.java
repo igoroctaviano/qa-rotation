@@ -11,6 +11,7 @@ import com.avenuecode.pages.HomePage;
 import com.avenuecode.pages.BlogPage;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
@@ -34,6 +35,8 @@ public class FooterSteps extends StepDefinition {
 
     @Then("^It should redirect to the content$")
     public void i_should_redirect_to_the_content() throws Throwable {
+        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+
         ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
 

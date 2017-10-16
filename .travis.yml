@@ -1,8 +1,13 @@
 before_script: cd actraining
 language: java
 sudo: required
+dist: trusty
 addons:
   chrome: stable
+before_install:
+  - # start your web application and listen on `localhost`
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+  ⋮
 script:
   - whereis google-chrome-stable
   - google-chrome-stable --version

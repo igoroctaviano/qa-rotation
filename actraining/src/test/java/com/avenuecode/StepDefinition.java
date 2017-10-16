@@ -10,16 +10,7 @@ public abstract class StepDefinition {
 
     protected WebDriver getDriver() {
         if (driver == null) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver");
-
-            final ChromeOptions chromeOptions = new ChromeOptions();
-            // chromeOptions.setBinary("/usr/bin/google-chrome-stable");
-            chromeOptions.addArguments("--headless");
-            chromeOptions.addArguments("--disable-gpu");
-
-            final DesiredCapabilities dc = new DesiredCapabilities();
-            dc.setJavascriptEnabled(true);
-            dc.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+            // System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver");
 
             driver = new ChromeDriver();
         }

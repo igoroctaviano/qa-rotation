@@ -7,7 +7,7 @@ public abstract class StepDefinition {
     protected static WebDriver driver;
 
     protected WebDriver getDriver() {
-        // System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver");
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver");
 
         if (driver == null) {
             driver = new ChromeDriver();
